@@ -26,7 +26,7 @@ def function():
     print("\n")
     print(swapArray)
     print("\n")
-    print(iCounter)
+    print(100 - iNegativeCounter)
 
 
 if (__name__ == '__main__'):
