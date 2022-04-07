@@ -1,0 +1,27 @@
+Problem:
+
+    Write an algorithm and draw a flowchart to input N and N numbers. Suppose that the
+    numbers are in the range -5000 <= x <= 5000. This algorithm/flowchart should find and
+    output the largest of N numbers.
+
+
+def function():
+
+    array = [Random 100 numbers between -5000 and 5000]
+
+    iCounter = 1 (To control the loop)
+
+    iMax = array[0] (symbolic biggest number)
+
+    while iCounter != 100:
+
+        if ( array[iCounter] > iMax):
+
+            iMax = array[iCounter]
+
+        else
+
+            iCounter++
+
+
+
