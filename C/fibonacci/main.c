@@ -28,10 +28,9 @@ int main()
     printf("\n%d", iSwap);
     printf("\n%d", iSwap2);
 
-    // Calculation
     while (iUser != 2)
     {
-        // According to fibonacci
+        // Fibonacci
         printf("\n%d", (iSwap + iSwap2));
         
         iSwap2 = iSwap + iSwap2;
