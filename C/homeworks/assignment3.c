@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h> // srand, rand functions
-#define MAX_VAL 100 
-#define MIN_VAL 0 
+#define MAX_VAL 100 // Second seed for random number
+#define MIN_VAL 0 // First seed for random number
 #define true 1
 #define false 0
 
@@ -10,8 +10,10 @@
 void game(int *rand_int, int *round, int *usr_guess, char *usr_status, int *usr_account, int *usr_bet); // rand_int: random_number, round: game_round, usr_guess: user_guess, usr_status: user_status
 void guess(int *rand_num); // rand_num represents 'random_number' in main
 int main(void){
+	// Random number seed
 	srand(time(MIN_VAL));
 	
+	// Variables
 	int user_account;  // Will hold the total acount 
 	int user_bet;	   // Will hold the bet (for each game)
 	int game_round;    // Will hold the round, (1 - 3)
@@ -22,13 +24,17 @@ int main(void){
 	
 	printf("Enter a start account for the game:\n"); 
 	scanf("%d",&user_account);
+	// TO DO: call the guess function to generate random number
 	
 	while(true){
+		// To start the game
 		game_round = 1;
 		
+		// Generate the random number
 		printf("Enter the bet amount: ");
 		scanf("%d",&user_bet);
-		guess(&random_number);	// Pseudo random number.
+		
+		guess(&random_number);
 		
 		
 		//user_bet vs user_account
@@ -37,7 +43,7 @@ int main(void){
 		    continue;
 		    
 		}
-		
+		// Game starts
 		else{
 			while(true){
 				
