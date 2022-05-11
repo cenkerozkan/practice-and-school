@@ -4,6 +4,8 @@
 - Each program is responsible for performing the specific tasks assigned such as:
   - Average grade calculation for students.
   - Some simple matrix operations like matrix multiplication.
+  
+  etc.
 
 ## Notes
 - Programs which written in C were compiled under **MinGW GCC 9.2.0 32-bit**, for this reason header files may differ for different platforms (Linux, MacOS etc.).
