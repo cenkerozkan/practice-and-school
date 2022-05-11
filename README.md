@@ -1,6 +1,6 @@
 # practice-and-school
 ## About
-- It is a simple repository that I have solved so far in order to fit the programming logic well, and I will continue to update it as I solve more
+- It is a simple repository that includes the problems I have solved so far in order to fit the programming logic well, and I will continue to update it as I solve more
 - Each program is responsible for performing the specific tasks assigned such as:
   - Average grade calculation for students.
   - Some simple matrix operations like matrix multiplication.
