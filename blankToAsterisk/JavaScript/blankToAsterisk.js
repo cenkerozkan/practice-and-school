@@ -22,10 +22,10 @@ function main(){
     // important than writing an algorithm which I have already done it
     // with C programming language. So I chose to use 'replaceAll()' function
     // to get it done.
-    sUsrInput = window.prompt('Please enter a string:\n');
+    sUsrInput = window.prompt('Please enter a line:\n');
     sResult = sUsrInput.replaceAll(" ","*");
 
-    console.log(sResult);
+    console.log("Line with asterisks:\n" + sResult);
 }
 
 main();
