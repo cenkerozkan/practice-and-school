@@ -20,7 +20,7 @@ public:
     Calculator(){};
     Calculator(float obj_num1, float obj_num2){this->num1=obj_num1; this->num2=obj_num2;}
 
-    // Method.
+    // Method prototype.
     void calc(void);
 };
 
