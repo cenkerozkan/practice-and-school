@@ -58,10 +58,8 @@ int main(void){
     cout << "Enter vector 2: "; cin >> x >> y >> z;
     Vector vec2(x,y,z);
 
-    // Comparison
-    // I learned that I can call a function from
-    // the class just to use once.
-    f_result = vec1.calcDistance(&vec2); // Does this work ?
+    // Calculation
+    f_result = vec1.calcDistance(&vec2);
 
     // Output.
     cout << "The distance between two vectors is: " << f_result << endl;
