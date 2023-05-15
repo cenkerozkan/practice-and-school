@@ -4,6 +4,6 @@
 
 - Compilers and standards are:
   - **Microsoft MSVC C++14**
-  - TDM-GCC Mingw-64 C++11
+  - TDM-GCC 10.3.0 Mingw-64 C++11
 
 - Every folder will have it's own UML structure in order to make the code more understandable.
