@@ -1,10 +1,9 @@
-# practice-and-school
+# CMPE226 Data Structures with C++
 ## About
-- It is a simple repository that includes the problems I have solved so far in order to fit the programming logic well, and I am going to continue to update it as I solve more.
-- I will also use this repository to store same problems with other programming languages' syntaxes.
-- Each program is responsible for performing the specific tasks assigned such as:
-  - Average grade calculation for students.
-  - Some simple matrix operations like matrix multiplication.
-- From now on, I will start to upload different files related to courser other than just programming courses.
-  
-  etc.
+- In this folder, I will share my work and the codes I wrote in order to be practical for the data structures course.
+
+- Compilers and standards are:
+  - **Microsoft MSVC C++14**
+  - TDM-GCC Mingw-64 C++11
+
+- Every folder will have it's own UML structure in order to make the code more understandable.
