@@ -9,6 +9,7 @@
  *  the operator is '-', substract the corresponding elements of the second array
  *  from the first array and if the operator is '*', multiply the corresponding
  *  elements. For each operation, write a function. Each function should recieve
+ *  two dimensional array, the size and return the resultant array.
  *
  * Sample run:
  *  Enter the array size (1-30): 6
