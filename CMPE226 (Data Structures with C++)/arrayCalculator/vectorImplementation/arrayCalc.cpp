@@ -19,59 +19,48 @@
  *  Result: 14 8 8 1 10 14
  * */
 
-
 #include <iostream>
-#include <list>         // Linked list STL header.
-#include <iterator>     // STL iterator.
+#include <vector>
+#include <algorithm>
 
 int main(void){
-    // Linked lists.
-    std::list<int> list1, list2, result_list;
-    std::list<int>::iterator it1, it2;
-    int size;
+    // Vectors.
+    std::vector<int> vec1, vec2, result_vec;
+    int size, temp;
     char c_operator;
 
-    std::cout << "Enter the array size(1-30): "; std::cin >> size;
+    std::cout << "Enter the array size (1-30): "; std::cin >> size;
 
     // List 1.
     std::cout << "List 1\n";
     for(int i=0; i<size; i++){
-        int temp;
-        std::cout << "Enter number " << i+1 << ": "; std::cin >> temp;
-        list1.push_back(temp);
+        std::cout << "Enter number " << i+1 << ":";
+        std::cin >> temp;
+        vec1.push_back(temp);
     }
 
-
-    // List 2.
-    std::cout << "\nList 2\n" ;
+    std::cout << "\nList 2\n";
     for(int i=0; i<size; i++){
-        int temp;
-        std::cout << "Enter number " << i+1 << ": "; std::cin >> temp;
-        list2.push_back(temp);
+        std::cout << "Enter number " << i+1 << ":";
+        std::cin >> temp;
+        vec2.push_back(temp);
     }
 
-
-   std::cout << "Enter an operator: "; std::cin >> c_operator;
+    std::cout << "Enter an operator: "; std::cin >> c_operator;
    switch (c_operator){
       case '+':
          for(int i=0; i<size; i++){
-            result_list.push_back(*it1 + *it2);
-            it1++;
-            it2++;
+            result_vec.push_back(vec1[i] + vec2[i]);
          }
          break;
       case '-':
          for(int i=0; i<size; i++){
-            result_list.push_back(*it1 - *it2);
-            it1++;
-            it2++;
+            result_vec.push_back(vec1[i] - vec2[i]);
          }
          break;
       case '*':
          for(int i=0; i<size; i++){
-            result_list.push_back(*it1 * *it2);
-            it1++;
-            it2++;
+            result_vec.push_back(vec1[i] * vec2[i]);
          }
          break;
       
@@ -79,10 +68,8 @@ int main(void){
          std::cout << "Invalid operator!" << std::endl;
    }
    std::cout << "Results:\n";
-   std::list<int>::iterator ptr = result_list.begin();
    for(int i=0; i<size; i++){
-    std::cout << *ptr << " ";
-    ptr++;
+    std::cout << result_vec[i] << " ";
    }
    return 0;
 }
