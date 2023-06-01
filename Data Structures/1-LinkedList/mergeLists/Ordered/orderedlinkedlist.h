@@ -151,14 +151,62 @@ class Orderedlinkedlist:public Linkedlist<T>{
         }
 
 
+        void merge_list(Orderedlinkedlist<T> &_list){
+            Node<T> *cursor = _list.first;      // Iterates the _list.
+            Node<T> *current;
+            Node<T> *trail_current;
+            Node<T> *new_node;
 
-
-        void merge_list(Orderedlinkedlist<T> &_param_list){
-            Node<T> *cursor = _param_list.first;
+            // This is basically does the same thing
+            // as 'insert()' method does. But this time
+            // in a while loop in order to iterate the 
+            // given linked list parameter.
             while(cursor != NULL){
-                insert(cursor->info);
+                // Case 1: If the current list is empty.
+                if(Linkedlist<T>::first == NULL || cursor == NULL){
+                    std::cout << "One or both lists are empty.\n";
+                }
+
+                // Case 2: Lists are not empty.
+                else{
+                    current = Linkedlist<T>::first;
+                    // Traversing the current list.
+                    while(current != NULL){
+                        if(current->info >= cursor->info){
+                            break;
+                        }
+                        else{
+                            trail_current = current;
+                            current = current->link;
+                        }
+                    }
+
+                    // Case 3: Head value bigger than cursor value.
+                    if(current == Linkedlist<T>::first){
+                        new_node = new Node<T>;
+                        new_node->info = cursor->info;
+
+                        new_node->link = current;
+                        Linkedlist<T>::first = new_node;
+                    }
+
+                    else{
+                        new_node = new Node<T>;
+                        new_node->info = cursor->info;
+
+                        trail_current->link = new_node;
+                        new_node->link = current;
+
+                        // Case 4: Cursor value bigger than last value.
+                        if(current == NULL){
+                            Linkedlist<T>::last = new_node;
+                        }
+                    }
+                }
+                Linkedlist<T>::count++;
                 cursor = cursor->link;
             }
         }
+
 };
 #endif
