@@ -4,7 +4,7 @@
         (Unordered)
 */
 
-// Solution starts at line 156 on orderedlinkedlist.h
+// Solution starts at line 154 on orderedlinkedlist.h
 
 #include <iostream>
 #include "orderedlinkedlist.h"
