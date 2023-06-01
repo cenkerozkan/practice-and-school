@@ -12,24 +12,29 @@
 int main(void){
     Orderedlinkedlist<int> list1, list2;
 
-    list1.insert_first(1);
-    list1.insert_first(2);
-    list1.insert_first(16);
-    list1.insert_first(7);
-    list1.insert_first(9);
-    list1.insert_first(10);
-    list1.insert_first(21);
+    list1.insert(3);
+    list1.insert(7);
+    list1.insert(8);
+    list1.insert(19);
+    list1.insert(40);
+    list1.insert(44);
+    list1.insert(53);
+    list1.insert(60);
 
-    list2.insert_first(6);
-    list2.insert_first(3);
-    list2.insert_first(7);
-    list2.insert_first(11);
-    list2.insert_first(29);
-    list2.insert_first(16);
-    list2.insert_first(88);
-    list2.insert_first(103);
-    list2.insert_first(102);
-    list2.insert_first(211);
+
+
+    list2.insert(1);
+    list2.insert(2);
+    list2.insert(9);
+    list2.insert(11);
+    list2.insert(15);
+    list2.insert(20);
+    list2.insert(23);
+    list2.insert(31);
+    list2.insert(45);
+    list2.insert(57);
+
+    //list2.print();
 
 
     //std::cout << list1.search(1002);

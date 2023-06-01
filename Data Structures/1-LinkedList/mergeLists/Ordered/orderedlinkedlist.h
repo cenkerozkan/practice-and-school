@@ -154,64 +154,10 @@ class Orderedlinkedlist:public Linkedlist<T>{
 
 
         void merge_list(Orderedlinkedlist<T> &_param_list){
-            // If given list is empty.
-            if(_param_list.first == NULL){
-                std::cout << "Given list is empty!\n";
-            }
-
-            // If current list is empty.
-            else if(Linkedlist<T>::first == NULL){
-                std::cout << "Current list is empty!\n";
-            }
-            
-            // Both lists are not empty.
-            else{
-                bool found;
-                //std::cout << "I'm here!\n";
-                Node<T> *cursor = _param_list.first;  // Iterates _param_list.
-                Node<T> *current = Linkedlist<T>::first;           
-                Node<T> *trail_current;
-                Node<T> *new_node;
-
-                while(cursor != NULL){
-                    while(true){
-                        if(Linkedlist<T>::first->info >= cursor->info){
-                            new_node = new Node<T>;
-                            new_node->info = cursor->info;
-
-                            Linkedlist<T>::last->link = new_node;
-                            Linkedlist<T>::last = new_node;
-                            break;
-                        }
-
-                        else if(Linkedlist<T>::last->info <= cursor->info){
-                            new_node = new Node<T>;
-                            new_node->info = cursor->info;
-                            
-                            Linkedlist<T>::last->link = new_node;
-                            Linkedlist<T>::last = new_node;
-
-                            break;
-                        }
-
-                        else if(cursor->info <= current->info){
-                            new_node = new Node<T>;
-                            new_node->info = cursor->info;
-
-                            trail_current->link = new_node;
-                            new_node->link = current;
-
-                            current = Linkedlist<T>::first;
-                            break;
-                        }
-                        else{
-                            trail_current = current;
-                            current = current->link;
-                        }
-                        Linkedlist<T>::count++;
-                    }
-                    cursor = cursor->link;
-                }
+            Node<T> *cursor = _param_list.first;
+            while(cursor != NULL){
+                insert(cursor->info);
+                cursor = cursor->link;
             }
         }
 };
